@@ -4,6 +4,7 @@ MAINTAINER The GAP Group <support@gap-system.org>
 
 ENV GAP_VERSION 4.11.1
 
+# remove NormalizInterface to save >1GB of disk space
 RUN    mkdir /home/gap/inst/ \
     && cd /home/gap/inst/ \
     && wget -q https://github.com/gap-system/gap/releases/download/v${GAP_VERSION}/gap-${GAP_VERSION}.tar.gz \
@@ -14,6 +15,7 @@ RUN    mkdir /home/gap/inst/ \
     && make \
     && cp bin/gap.sh bin/gap \
     && cd pkg \
+    && rm -R NormalizInterface* \
     && ../bin/BuildPackages.sh \
     && test='JupyterKernel-*' \
     && mv ${test} JupyterKernel \
