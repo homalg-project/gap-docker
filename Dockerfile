@@ -15,8 +15,6 @@ RUN    mkdir /home/gap/inst/ \
     && make \
     && cp bin/gap.sh bin/gap \
     && cd pkg \
-    && rm -f NormalizInterface*/build-normaliz.sh \
-    && rm -f NormalizInterface*/prerequisites.sh \
     && ../bin/BuildPackages.sh
     #&& test='JupyterKernel-*' \
     #&& mv ${test} JupyterKernel \
