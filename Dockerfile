@@ -4,7 +4,6 @@ MAINTAINER The GAP Group <support@gap-system.org>
 
 ENV GAP_VERSION 4.12.0
 
-# remove NormalizInterface to save >1GB of disk space
 RUN    mkdir -p /home/gap/inst/ \
     && cd /home/gap/inst/ \
     && wget -q https://github.com/gap-system/gap/releases/download/v${GAP_VERSION}/gap-${GAP_VERSION}.tar.gz \
