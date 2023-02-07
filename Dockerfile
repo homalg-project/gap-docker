@@ -1,6 +1,6 @@
 FROM ghcr.io/homalg-project/gap-docker-base:latest
 
-ENV GAP_VERSION 4.12.1
+ENV GAP_VERSION 4.12.2
 
 RUN    mkdir -p /home/gap/inst/ \
     && cd /home/gap/inst/ \
@@ -12,7 +12,7 @@ RUN    mkdir -p /home/gap/inst/ \
     && make \
     && cp bin/gap.sh bin/gap \
     && cd pkg \
-    && rm normalizinterface/build-normaliz.sh \
+    && rm normalizinterface/prerequisites.sh \
     && ../bin/BuildPackages.sh
     #&& test='JupyterKernel-*' \
     #&& mv ${test} JupyterKernel \
