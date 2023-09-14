@@ -19,12 +19,6 @@ RUN    mkdir -p /home/gap/inst/ \
     #&& cd JupyterKernel \
     #&& python3 setup.py install --user
 
-# Remove StandardFF:
-# We do not need it but it causes various issues,
-# see https://github.com/gap-system/PackageDistro/pull/821
-# and https://github.com/frankluebeck/StandardFF/pull/6
-RUN rm -R /home/gap/inst/gap-${GAP_VERSION}/pkg/standardff
-
 #RUN jupyter serverextension enable --py jupyterlab --user
 
 #ENV PATH /home/gap/inst/gap-${GAP_VERSION}/pkg/JupyterKernel/bin:${PATH}
