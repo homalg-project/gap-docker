@@ -10,7 +10,6 @@ RUN    mkdir -p /home/gap/inst/ \
     && cd gap-${GAP_VERSION} \
     && ./configure \
     && make \
-    && cp bin/gap.sh bin/gap \
     && cd pkg \
     && rm normalizinterface/prerequisites.sh \
     && ../bin/BuildPackages.sh
@@ -25,4 +24,4 @@ RUN    mkdir -p /home/gap/inst/ \
 #ENV JUPYTER_GAP_EXECUTABLE /home/gap/inst/gap-${GAP_VERSION}/bin/gap.sh
 
 ENV GAP_HOME /home/gap/inst/gap-${GAP_VERSION}
-ENV PATH ${GAP_HOME}/bin:${PATH}
+ENV PATH ${GAP_HOME}:${PATH}
