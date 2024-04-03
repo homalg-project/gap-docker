@@ -1,6 +1,6 @@
 FROM ghcr.io/homalg-project/gap-docker-base:latest
 
-ENV GAP_VERSION 4.12.2
+ENV GAP_VERSION 4.13.0
 
 RUN    mkdir -p /home/gap/inst/ \
     && cd /home/gap/inst/ \
