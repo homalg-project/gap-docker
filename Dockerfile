@@ -23,6 +23,10 @@ RUN    mkdir -p /home/gap/inst/ \
     #&& cd JupyterKernel \
     #&& python3 setup.py install --user
 
+## workaround for until new digraphs version is released
+RUN    cd /home/gap/inst/gap-${GAP_VERSION}/ \
+    && touch pkg/digraphs/gap/doc.g
+
 #RUN jupyter serverextension enable --py jupyterlab --user
 
 #ENV PATH /home/gap/inst/gap-${GAP_VERSION}/pkg/JupyterKernel/bin:${PATH}
