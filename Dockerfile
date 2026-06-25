@@ -24,11 +24,8 @@ RUN    mkdir -p /home/gap/inst/ \
     #&& python3 setup.py install --user
 
 ## workaround for until new digraphs version is released
-#RUN    cd /home/gap/inst/gap-${GAP_VERSION}/ \
-#    && touch pkg/digraphs/gap/doc.g
-
-## workaround old AutoDoc
-RUN    cd /home/gap/.gap/pkg && git clone --depth 1 -vv https://github.com/gap-packages/AutoDoc.git
+RUN    cd /home/gap/inst/gap-${GAP_VERSION}/ \
+    && touch pkg/digraphs/gap/doc.g
 
 #RUN jupyter serverextension enable --py jupyterlab --user
 
