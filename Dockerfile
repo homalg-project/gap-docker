@@ -1,6 +1,6 @@
 FROM ghcr.io/homalg-project/gap-docker-base:latest
 
-ENV GAP_VERSION 4.15.1
+ENV GAP_VERSION 4.16.0
 
 # NormalizInterface: switch to C++14 to work around https://github.com/gap-packages/NormalizInterface/issues/110
 
