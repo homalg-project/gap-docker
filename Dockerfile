@@ -34,3 +34,4 @@ RUN    cd /home/gap/inst/gap-${GAP_VERSION}/ \
 
 ENV GAP_HOME /home/gap/inst/gap-${GAP_VERSION}
 ENV PATH ${GAP_HOME}:${PATH}
+ENV GAP_PRINT_BANNER false
